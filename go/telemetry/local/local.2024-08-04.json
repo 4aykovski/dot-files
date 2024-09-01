@@ -1,0 +1,45 @@
+{
+ "Week": "2024-08-04",
+ "LastWeek": "",
+ "X": 0.06066998674578783,
+ "Programs": [
+  {
+   "Program": "golang.org/x/tools/gopls",
+   "Version": "v0.16.1",
+   "GoVersion": "go1.22.3",
+   "GOOS": "linux",
+   "GOARCH": "amd64",
+   "Counters": {
+    "gopls/client:neovim": 16,
+    "gopls/completion/latency:\u003c100ms": 30,
+    "gopls/completion/latency:\u003c10ms": 3378,
+    "gopls/completion/latency:\u003c1s": 1,
+    "gopls/completion/latency:\u003c200ms": 46,
+    "gopls/completion/latency:\u003c24h": 1,
+    "gopls/completion/latency:\u003c500ms": 21,
+    "gopls/completion/latency:\u003c50ms": 2354,
+    "gopls/completion/len:0": 2479,
+    "gopls/completion/len:\u003c=10": 2452,
+    "gopls/completion/len:\u003e10": 909,
+    "gopls/completion/used:no": 4039,
+    "gopls/definition/latency:\u003c100ms": 1,
+    "gopls/definition/latency:\u003c10ms": 210,
+    "gopls/definition/latency:\u003c500ms": 1,
+    "gopls/definition/latency:\u003c50ms": 1,
+    "gopls/gotoolchain:auto": 19,
+    "gopls/goversion:1.22": 16,
+    "gopls/hover/latency:\u003c10ms": 17,
+    "gopls/implementation/error-latency:\u003c10ms": 153,
+    "gopls/implementation/latency:\u003c10ms": 34,
+    "gopls/implementation/latency:\u003c500ms": 1,
+    "gopls/implementation/latency:\u003c50ms": 8,
+    "gopls/implementation/latency:\u003c5s": 1,
+    "gopls/references/error-latency:\u003c10ms": 115,
+    "gopls/references/latency:\u003c10ms": 74,
+    "gopls/references/latency:\u003c50ms": 8
+   },
+   "Stacks": {}
+  }
+ ],
+ "Config": "v0.26.0"
+}
