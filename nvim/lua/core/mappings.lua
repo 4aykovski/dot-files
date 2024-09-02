@@ -272,11 +272,19 @@ M.telescope = {
     -- find
     ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "Find files" },
     ["<leader>fa"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", "Find all" },
-    ["<leader>fw"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
+    ["<leader>fg"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
     ["<leader>fb"] = { "<cmd> Telescope buffers <CR>", "Find buffers" },
     ["<leader>fh"] = { "<cmd> Telescope help_tags <CR>", "Help page" },
     ["<leader>fo"] = { "<cmd> Telescope oldfiles <CR>", "Find oldfiles" },
-    ["<leader>fz"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
+    ["<leader>fc"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
+
+    -- Telescope
+    ["<leader>tgs"] = { "<cmd> Telescope git_status <CR>", "Git status" },
+    ["<leader>tgc"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
+
+    ["<leader>tli"] = { "<cmd> Telescope lsp_implementations <CR>", "Lsp implementations" },
+    ["<leader>tlr"] = { "<cmd> Telescope lsp_references <CR>", "Lsp references" },
+    ["<leader>tld"] = { "<cmd> Telescope lsp_definitions <CR>", "Lsp definitions" },
 
     -- git
     ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
