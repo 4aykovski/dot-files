@@ -64,4 +64,15 @@ require("lspconfig").lua_ls.setup {
   },
 }
 
+local pid = vim.fn.getpid()
+
+local omnisharp_bin = "/usr/local/bin/omnisharp-roslyn/OmniSharp"
+
+require("lspconfig").omnisharp.setup {
+  cmd = { omnisharp_bin, "--languageserver", "--hostPID", pid, "--languages" },
+  on_attach = function(client, bufnr)
+    vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+  end,
+}
+
 return M

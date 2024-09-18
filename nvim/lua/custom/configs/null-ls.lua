@@ -29,6 +29,7 @@ local opts = {
         buffer = bufnr,
         callback = function()
           vim.lsp.buf.format { bufnr = bufnr }
+          vim.lsp.buf.format { timeout = 2000 }
         end,
       })
     end
