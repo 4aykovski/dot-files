@@ -8,6 +8,8 @@ vim.g.mapleader = " "
 
 -- basic keymaps
 
+vim.keymap.set("n", "<Esc>", ":noh<CR>", { desc = "no highlight" })
+
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "window left" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "window down" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "window up" })
