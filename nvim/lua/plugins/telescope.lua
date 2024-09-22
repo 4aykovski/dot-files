@@ -11,6 +11,7 @@ return {
 			vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "live grep" })
 			vim.keymap.set("n", "<leader>fo", builtin.oldfiles, { desc = "find old" })
 			vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "find buffs" })
+			vim.keymap.set("n", "<leader>fc", builtin.current_buffer_fuzzy_find, { desc = "fuzzy find" })
 
 			-- jumps
 			vim.keymap.set("n", "<leader>tj", builtin.jumplist, { desc = "jumplist" })
