@@ -25,10 +25,10 @@ return {
 	},
 	dependencies = { "nvim-treesitter/nvim-treesitter" }, -- if you install parsers with `nvim-treesitter`
 	config = function()
-		local tsj = require("tressj")
+		local tsj = require("treesj")
 
 		tsj.setup({
-			use_default_keymaps = true,
+			use_default_keymaps = false,
 			check_syntax_error = true,
 			max_join_length = 120,
 			cursor_behavior = "hold",

@@ -48,7 +48,7 @@ lspconfig.html.setup({
 	cmd = { "vscode-html-language-server", "--stdio" },
 	filetypes = { "html", "templ" },
 	root_dir = util.root_pattern("package.json", ".git"),
-	single_file_support = true,
+	ingle_file_support = true,
 	capabilities = capabilities,
 	settings = {},
 	init_options = {

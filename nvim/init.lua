@@ -17,3 +17,6 @@ vim.opt.rtp:prepend(lazypath)
 require("vim-options")
 
 require("lazy").setup("plugins")
+require("lazy").setup("themes")
+
+vim.cmd("colorscheme catppuccin-mocha")
