@@ -36,11 +36,9 @@ function start_ssh_agent {
   chmod 600 "${SSH_ENV}"
 
   run_ssh_env;
+  ssh-add ~/.ssh/github_ssh
 
   echo "Loading keys into ssh-agent..."
-  ssh-add ~/.ssh/github_ssh;
-  ssh-add ~/.ssh/vscale-mra-ssh;
-  ssh-add ~/.ssh/vscale-kickidler-ssh;
 }
 
 if [ -f "${SSH_ENV}" ]; then
