@@ -243,6 +243,13 @@ lspconfig.volar.setup({
 		},
 	},
 	settings = {
+		html = {
+			format = {
+				wrapAttributes = {
+					enabled = true,
+				},
+			},
+		},
 		typescript = {
 			inlayHints = {
 				enumMemberValues = {

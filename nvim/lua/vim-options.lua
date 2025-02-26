@@ -4,6 +4,7 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set relativenumber")
 vim.cmd("set clipboard+=unnamedplus")
+vim.cmd("set notermguicolors")
 
 vim.g.mapleader = " "
 
