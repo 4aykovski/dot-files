@@ -19,3 +19,5 @@ require("vim-options")
 require("lazy").setup("plugins")
 
 vim.keymap.set("n", "<leader>x", "<cmd>bd<CR>", { desc = "close buffer" })
+
+vim.cmd("colorscheme catppuccin-mocha")
