@@ -1,7 +1,11 @@
 return {
 	"MunifTanjim/prettier.nvim",
 	config = function()
-		require("prettier").setup({
+		local prettier = require("prettier")
+		prettier.setup({
+			cli_options = {
+				single_attribute_per_line = true,
+			},
 			bin = "prettier",
 			filetypes = {
 				"css",

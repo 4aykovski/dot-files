@@ -7,7 +7,7 @@ return {
 	config = function()
 		require("codeium").setup({
 			-- Optionally disable cmp source if using virtual text only
-			enable_cmp_source = false,
+			enable_cmp_source = true,
 			virtual_text = {
 				enabled = true,
 
@@ -41,9 +41,9 @@ return {
 					-- Clear the virtual text.
 					clear = false,
 					-- Cycle to the next completion.
-					next = "<M-]>",
+					next = "<c-l>",
 					-- Cycle to the previous completion.
-					prev = "<M-[>",
+					prev = "<c-k>",
 				},
 			},
 		})
