@@ -21,3 +21,15 @@ vim.keymap.set({ "n", "v" }, "<Up>", "<Nop>", { desc = "disable arrows" })
 vim.keymap.set({ "n", "v" }, "<Down>", "<Nop>", { desc = "disable arrows" })
 vim.keymap.set({ "n", "v" }, "<Left>", "<Nop>", { desc = "disable arrows" })
 vim.keymap.set({ "n", "v" }, "<Right>", "<Nop>", { desc = "disable arrows" })
+
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    virtual_text = true,
+  }
+)
+
+vim.diagnostic.config({
+  virtual_lines = {
+    current_line = true
+  }
+})
