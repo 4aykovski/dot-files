@@ -5,6 +5,7 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("set relativenumber")
 vim.cmd("set clipboard+=unnamedplus")
 vim.cmd("set notermguicolors")
+vim.cmd("set fileencodings=utf-8,cp1251,koi8-r,cp866")
 
 vim.g.mapleader = " "
 
@@ -22,6 +23,8 @@ vim.keymap.set({ "n", "v" }, "<Down>", "<Nop>", { desc = "disable arrows" })
 vim.keymap.set({ "n", "v" }, "<Left>", "<Nop>", { desc = "disable arrows" })
 vim.keymap.set({ "n", "v" }, "<Right>", "<Nop>", { desc = "disable arrows" })
 
+vim.keymap.set("n", "<leader>x", "<cmd>bd<CR>", { desc = "close buffer" })
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     virtual_text = true,
@@ -33,3 +36,4 @@ vim.diagnostic.config({
     current_line = true
   }
 })
+

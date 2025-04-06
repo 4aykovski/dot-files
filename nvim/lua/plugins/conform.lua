@@ -10,7 +10,7 @@ return {
 			python = { "isort", "black" },
 			javascript = { "prettierd" },
 			typescript = { "prettierd" },
-			go = { "gofmt", "golines", "goimports" },
+			go = { "gofmt",  "goimports" },
 			html = { "prettierd" },
 			scss = { "prettierd" },
 			css = { "prettierd" },
