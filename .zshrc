@@ -10,8 +10,8 @@ export GOROOT=/usr/lib/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 export PATH=$PATH:/opt/nvim-linux64/bin
-export PATH=$PATH:/home/chaykovski/.local/bin
-export PATH="/home/chaykovski/.bun/bin:$PATH"
+export PATH=$PATH:$HOME/.local/bin
+export PATH="$HOME/.bun/bin:$PATH"
 export LD_LIBRARY_PATH=/usr/local/cuda-12.5/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 export PATH="$PATH:$(go env GOPATH)/bin"
@@ -20,10 +20,6 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 
 export FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude .git --exclude node_modules --exclude target . ~'
-
-# export FZF_ALT_C_OPTS="
-#   --walker-skip .git,node_modules,target
-#   --preview 'tree -C {}'"
 
 eval "$(tmuxifier init -)"
 
@@ -35,7 +31,7 @@ alias gs="goto-ssh"
 
 autoload -U compinit
 compinit -i 
-source /home/chaykovski/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # activate fzf keybindings if installed
 source <(fzf --zsh)
@@ -88,4 +84,4 @@ _dotnet_zsh_complete()
 compdef _dotnet_zsh_complete dotnet
 
 # bun completions
-[ -s "/home/chaykovski/.bun/_bun" ] && source "/home/chaykovski/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
