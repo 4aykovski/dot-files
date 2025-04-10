@@ -2,7 +2,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="fino-time"
 
-plugins=(git)
+plugins=(git tmux zsh-autosuggestions) 
 
 source $ZSH/oh-my-zsh.sh
 
@@ -11,17 +11,34 @@ export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 export PATH=$PATH:/opt/nvim-linux64/bin
 export PATH=$PATH:/home/chaykovski/.local/bin
+export PATH="/home/chaykovski/.bun/bin:$PATH"
 export LD_LIBRARY_PATH=/usr/local/cuda-12.5/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 export PATH="$HOME/.tmuxifier/bin:$PATH"
+export PATH="$PATH:$(go env GOPATH)/bin"
+
+export EDITOR="nvim"
+export VISUAL="nvim"
+
+export FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude .git --exclude node_modules --exclude target . ~'
+
+# export FZF_ALT_C_OPTS="
+#   --walker-skip .git,node_modules,target
+#   --preview 'tree -C {}'"
 
 eval "$(tmuxifier init -)"
 
 alias ssh='TERM=xterm-256color ssh'
+alias lg='lazygit'
+alias ldo='lazydocker'
+alias lj='lazyjournal'
+alias gs="goto-ssh"
 
 autoload -U compinit
 compinit -i 
 source /home/chaykovski/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# activate fzf keybindings if installed
+source <(fzf --zsh)
 
 SSH_ENV="$HOME/.ssh/environment"
 
@@ -36,9 +53,10 @@ function start_ssh_agent {
   chmod 600 "${SSH_ENV}"
 
   run_ssh_env;
-  ssh-add ~/.ssh/github_ssh
 
   echo "Loading keys into ssh-agent..."
+  ssh-add ~/.ssh/github_ssh;
+  ssh-add ~/.ssh/chaylab-pc;
 }
 
 if [ -f "${SSH_ENV}" ]; then
@@ -68,3 +86,6 @@ _dotnet_zsh_complete()
 }
 
 compdef _dotnet_zsh_complete dotnet
+
+# bun completions
+[ -s "/home/chaykovski/.bun/_bun" ] && source "/home/chaykovski/.bun/_bun"
